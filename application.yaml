@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: guestbook-rollout
+  name: duser-rollout
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/Deepthi-mygit/argo-rollout-duser-blue-green.git
-    path: guestbook-rollout
+    path: duser-rollout
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
